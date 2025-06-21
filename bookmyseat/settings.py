@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-fm-9%h7@t$s1a6#=zu-j7+o))dcd#mil@a^l*2=x&)sasa%g_v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-bookmyseat-nine.vercel.app', 'django-bookmyseat-2uihnberg-sauravs-projects-1ec44ae2.vercel.app']
+ALLOWED_HOSTS = ['django-bookmyseat-ndme.vercel.app']
 
 
 # Application definition
@@ -29,17 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'movies',
-    'cloudinary',
-    'cloudinary_storage',
 ]
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dtwksljdh',
-    'API_KEY': '236812961649769',
-    'API_SECRET': 'JnMkvF6OxpRvJv6VK1mDLQFatrE'
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,7 +43,8 @@ MIDDLEWARE = [
 AUTH_USER_MODEL='auth.User'
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ROOT_URLCONF = 'bookmyseat.urls'
 LOGIN_URL = '/login/'
