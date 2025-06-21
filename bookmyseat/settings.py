@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-fm-9%h7@t$s1a6#=zu-j7+o))dcd#mil@a^l*2=x&)sasa%g_v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-bookmyseat-ndme.vercel.app']
+ALLOWED_HOSTS = ['django-bookmyseat-ndme.vercel.app', 'django-bookmyseat-nine.vercel.app']
 
 
 # Application definition
