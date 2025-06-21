@@ -29,7 +29,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'movies',
+    'cloudinary',
+    'cloudinary_storage',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dtwksljdh',
+    'API_KEY': '236812961649769',
+    'API_SECRET': 'your_actual_api_secret_here'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -43,8 +53,7 @@ MIDDLEWARE = [
 AUTH_USER_MODEL='auth.User'
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 ROOT_URLCONF = 'bookmyseat.urls'
 LOGIN_URL = '/login/'
